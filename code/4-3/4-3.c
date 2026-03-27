@@ -13,12 +13,10 @@ int main() {
         printf("address of arr[%d]: %p\n", i + 1, addr_1);
 
         // 주소 차이
-        printf("&arr[%d] - &arr[%d] = %lu\n",
-               i, i + 1,
-               (unsigned long)addr_1 - (unsigned long)addr_0);
-
+        printf("&arr[%d] - &arr[%d] = %lu\n", i, i + 1, (unsigned long)addr_1 - (unsigned long)addr_0);
         printf("\n");
     }
 
     return 0;
+    
 }
