@@ -11,8 +11,8 @@ int main() {
         printf("address of arr[%d]: %p\n", i, addr_0);
         printf("address of arr[%d]: %p\n", i+1, addr_1);
 
-        printf("&arr[%d] - &arr[%d] = %ld\n",
-               i, i+1,
+        printf("&arr[%d] - &arr[%d+1] = %ld\n",
+               i, i,
                (long)(&arr[i+1] - &arr[i]));
 
         printf("\n");
