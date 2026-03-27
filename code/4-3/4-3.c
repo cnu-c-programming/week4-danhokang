@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int arr[] = {3, 7, 1, 9, 4, 6};
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    for (int i = 0; i < n - 1; i++) {
+        void* addr_0 = &arr[i];
+        void* addr_1 = &arr[i + 1];
+
+        // 주소 출력
+        printf("address of arr[%d]: %p\n", i, addr_0);
+        printf("address of arr[%d]: %p\n", i + 1, addr_1);
+
+        // 주소 차이
+        printf("&arr[%d] - &arr[%d] = %lu\n",
+               i, i + 1,
+               (unsigned long)addr_1 - (unsigned long)addr_0);
+
+        printf("\n");
+    }
+
+    return 0;
+}
